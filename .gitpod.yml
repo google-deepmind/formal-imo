@@ -1,0 +1,13 @@
+# This is run when starting a Gitpod workspace on this repository
+
+image: leanprovercommunity/gitpod4
+
+vscode:
+  extensions:
+    - leanprover.lean4
+
+tasks:
+  - init: |
+      elan self update
+      lake exe cache get
+      lake build
