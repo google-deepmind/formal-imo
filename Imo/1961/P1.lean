@@ -24,9 +24,17 @@ open scoped Nat
 Solve the following equations for $x,y$ and $z$: $$x+y+z=a; x^2+y^2+z^2=b^2; xy=z^2.$$ What conditions must $a$ and $b$ satisfy for $x,y$ and $z$ to be distinct positive numbers?
 Solution: a > 0 and b^2 < a^2 < 3b^2.
 -/
+/-
+Note: the informal question also asks to solve for $x, y$ and $z$, however we diverge slightly from this
+in only asking for the conditions on $a$ and $b$ for the solutions to be distinct positive reals. This is
+because we do not support multiple `answer` in problem statements.
+-/
 @[imo_problem_subject algebra]
-theorem imo_1961_p1 :
-    {(a, b) | (a) (b) (x) (y) (z) (_ : x + y + z = a) (_ : x ^ 2 + y ^ 2 + z ^ 2 = b ^ 2)
-      (_ : x * y = z ^ 2) (_ : 0 < x) (_ : 0 < y) (_ : 0 < z) (_ : [x, y, z].Nodup)}
-    = answer({(a, b) | (a) (b) (_ : 0 < a) (_ : b^2 < a^2) (_ : a^2 < 3*b^2) }) := by
+theorem imo_1961_p1 (a b : ℝ) :
+    (∃ᵉ (x > 0) (y > 0) (z > 0),
+      x + y + z = a ∧
+      x ^ 2 + y ^ 2 + z ^ 2 = b ^ 2 ∧
+      x * y = z ^ 2 ∧
+      [x, y, z].Nodup) ↔
+    answer(b ^ 2 < a ^ 2 ∧ a ^ 2 < 3 * b ^ 2) := by
   sorry
