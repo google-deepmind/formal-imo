@@ -30,9 +30,9 @@ package imo where
 lean_lib Imo where
   globs := #[.submodules `Imo]
 
-require "leanprover-community" / "mathlib" @ "git#v4.14.0"
+require "leanprover-community" / "mathlib"
 
-require "google-deepmind" / "formal_conjectures" @ "git#v4.14.0"
+require "google-deepmind" / "formal_conjectures"
 
 
 lean_exe extract_subjects where

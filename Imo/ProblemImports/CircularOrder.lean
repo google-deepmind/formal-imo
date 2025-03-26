@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -/
 
+import Mathlib.Algebra.Group.Int.Defs
+import Mathlib.Algebra.Order.Group.Unbundled.Abs
 import Mathlib.Logic.Pairwise
 import Mathlib.Order.Circular
 import Mathlib.Order.Fin.Basic
