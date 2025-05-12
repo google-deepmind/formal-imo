@@ -26,7 +26,7 @@ Consider infinite sequences $\{x_n\}$ of positive reals such that $x_0=1$ and $x
 
 [b]b)[/b] Find such a sequence such that for all $n$: \[ {x_0^2\over x_1}+{x_1^2\over x_2}+\ldots+{x_{n-1}^2\over x_n}< 4. \] -/
 theorem imo_1982_p3.parts.a (x : ℕ → ℝ) (h₀ : ∀ i, 0 < x i) (h₁ : x 0 = 1) (h₂ : Antitone x) :
-    ∃ n ≥ 1, ∑ i ∈ Finset.Icc 1 n, x (i - 1) ^ 2 / x i ≥ 3.999 := by
+    ∃ n ≥ 1, ∑ i ∈ Finset.range n, x i ^ 2 / x (i + 1) ≥ 3.999 := by
   sorry
 
 /--
@@ -40,3 +40,19 @@ theorem imo_1982_p3.parts.b :
     ∃ x : ℕ → ℝ, (∀ i, 0 < x i) ∧ x 0 = 1 ∧ Antitone x ∧
       ∀ n, ∑ i ∈ Finset.range n, x i ^ 2 / x (i + 1) < 4 := by
   sorry
+
+/--
+Consider infinite sequences $\{x_n\}$ of positive reals such that $x_0=1$ and $x_0\ge x_1\ge x_2\ge\ldots$.
+
+[b]a)[/b] Prove that for every such sequence there is an $n\ge1$ such that: \[ {x_0^2\over x_1}+{x_1^2\over x_2}+\ldots+{x_{n-1}^2\over x_n}\ge3.999. \]
+
+[b]b)[/b] Find such a sequence such that for all $n$: \[ {x_0^2\over x_1}+{x_1^2\over x_2}+\ldots+{x_{n-1}^2\over x_n}< 4. \] -/
+@[imo_problem_subject algebra]
+theorem imo_1982_p3 :
+    -- part a)
+    (∀ (x : ℕ → ℝ), (∀ i, 0 < x i) → x 0 = 1 → Antitone x →
+      ∃ n ≥ 1, ∑ i ∈ Finset.range n, x i ^ 2 / x (i + 1) ≥ 3.999) ∧
+    -- part b)
+    ∃ x : ℕ → ℝ, (∀ i, 0 < x i) ∧ x 0 = 1 ∧ Antitone x ∧
+      ∀ n, ∑ i ∈ Finset.range n, x i ^ 2 / x (i + 1) < 4 :=
+  ⟨imo_1982_p3.parts.a, imo_1982_p3.parts.b⟩
