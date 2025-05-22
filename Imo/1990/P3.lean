@@ -22,5 +22,6 @@ open scoped Nat
 -- Derived from miniF2F's valid.lean
 /-- Determine all integers greater than $1$ such that $2^n+1\over n^2$ is an integer. -/
 @[imo_problem_subject number_theory]
-theorem imo_1990_p3 (n : ℕ) (h₀ : 2 ≤ n) (h₁ : n ^ 2 ∣ 2 ^ n + 1) : n = 3 := by
+theorem imo_1990_p3 :
+    { n : ℕ | 1 < n ∧ n ^ 2 ∣ 2 ^ n + 1} = answer({3}) := by
   sorry
