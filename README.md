@@ -25,7 +25,7 @@ Frequently these contradict each other!
 The content for problem `N` for year `YYYY` should appear in `Imo/YYYY/PN.lean`.
 At a minimum, this file should contain a `theorem imo_YYYY_pN`.
 
-### Partial formalizations
+### Problems with parts
 
 Some questions have multiple parts. In the interest of allowing partial credit on the benchmark, these can be split into separate theorems _in addition_ to the single `imo_YYYY_pN` with the full answer.
 For instance, a question with parts i) and ii) would have two extra theorems `imo_YYYY_pN.parts.i` and `imo_YYYY_pN.parts.ii`.
@@ -37,12 +37,19 @@ In these cases, names like `imo_YYYY_pN.parts.superset` can be used.
 
 ## Other formalization notes
 
-### Geometry
+### Problems with answers
 
-For geometric problems, we have various ways to write "a 2D euclidean space":
+Many IMO problems involve guessing some answer and then proving that it is correct.
+When formalising such problems, we include the answer that is to be guessed, annotated
+with the `answer()` elaborator from the [formal-conjectures repository](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Util/Answer.lean). See for example the file `IMO/2010/P1.lean`.
+
+### Problems involving geometry
+
+For problems with a geometric component, we have various ways to write "a 2D euclidean space":
 
 1. `{V P} [NormedAddCommGroup V] [InnerProductSpace ℝ V] [MetricSpace P] [NormedAddTorsor V P] [Module.Oriented ℝ V (Fin 2)] [Fact (Module.finrank ℝ V = 2)]` (as demonstrated by [`EuclideanGeometry.oangle_add_oangle_add_oangle_eq_pi`](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Geometry/Euclidean/Triangle.html#EuclideanGeometry.oangle_add_oangle_add_oangle_eq_pi))
-2. `ℝ²` aka `EuclideanSpace ℝ (Fin 2)` (notation provided in the [formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ForMathlib/Geometry/2d.lean) repository).
+2. `ℝ²` aka `EuclideanSpace ℝ (Fin 2)` (notation provided in the [formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ForMathlib/Geometry/2d.lean) repository)
+3. `ℂ`.
 
 1 has the advantage that it doesn't impose a coordinate-based view; and generalizes to situations where the 2D space resides within a larger ambient nD space. It seems to be the preferred approach by some existing mathlib users.
 
