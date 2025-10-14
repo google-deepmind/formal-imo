@@ -19,15 +19,4 @@ import Mathlib.Algebra.Order.Group.Unbundled.Abs
 import Mathlib.Logic.Pairwise
 import Mathlib.Order.Circular
 import Mathlib.Order.Fin.Basic
-
--- Upstreamed in https://github.com/leanprover-community/mathlib4/pull/25369
-
-instance (n : ℕ) : CircularOrder (Fin n) := LinearOrder.toCircularOrder _
-
-lemma sbtw_iff {n : ℕ} (i j k : Fin n) :
-    sbtw i j k ↔ (i < j ∧ j < k) ∨ (j < k ∧ k < i) ∨ (k < i ∧ i < j) :=
-  Iff.rfl
-
-lemma btw_iff {n : ℕ} (i j k : Fin n) :
-    btw i j k ↔ (i ≤ j ∧ j ≤ k) ∨ (j ≤ k ∧ k ≤ i) ∨ (k ≤ i ∧ i ≤ j) :=
-  Iff.rfl
+import Mathlib.Order.Circular.ZMod

@@ -18,6 +18,7 @@ import Imo.ProblemImports
 
 open scoped Real
 open scoped Nat
+open scoped Fin.CommRing
 
 /--
 Given an $n \times n$ square board, with $n$ even. Two distinct squares of the board are said to be adjacent if they share a common side, but a square is not adjacent to itself. Find the minimum number of squares that can be marked so that every square (marked or not) is adjacent to at least one marked square.

@@ -18,6 +18,7 @@ import Imo.ProblemImports
 
 open scoped Real
 open scoped Nat
+open scoped Fin.CommRing
 
 /--
 Let $p,q,n$ be three positive integers with $p+q < n$. Let $x_0, x_1, \ldots , x_n$ be integers such that $x_0 = x_n = 0$, and for each $1\le i \le n, x_i - x_{i-1} = p$ or $-q$. Show that there exist indices $i< j$ with $(i,j)$ not $(0,n)$ such that $x_i=x_j$. -/

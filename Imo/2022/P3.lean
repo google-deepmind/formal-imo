@@ -26,7 +26,7 @@ theorem imo_2022_p3
     (S : Finset ℕ) (hs : ∀ n ∈ S, n.Prime ∧ Odd n)
     -- the relation "up to rotation and reflection"
     (same : Setoid (Fin S.card → ℕ))
-    (hRel_iff : ∀ x y, same.Rel x y ↔ (∃ i : Fin S.card, x ∘ (i + ·) = y) ∨ (∃ i, x ∘ (i - ·) = y) ∨ S.card = 0)
+    (hRel_iff : ∀ x y, same.r x y ↔ (∃ i : Fin S.card, x ∘ (i + ·) = y) ∨ (∃ i, x ∘ (i - ·) = y) ∨ S.card = 0)
     -- the set of all possible solutions up to the relation, which are genuinely arrangements and satisfy the required constraint
     (sols : Set (Quotient same))
     (hS : ∀ p : Fin S.card → ℕ,

@@ -19,6 +19,7 @@ import Imo.ProblemImports
 open scoped Real
 open scoped Nat
 open scoped Classical
+open scoped Fin.CommRing
 
 /--
 Let $ n$ and $ k$ be positive integers with $ k \geq n$ and $ k - n$ an even number. Let $ 2n$ lamps labelled $ 1$, $ 2$, ..., $ 2n$ be given, each of which can be either [i]on[/i] or [i]off[/i]. Initially all the lamps are off. We consider sequences of steps: at each step one of the lamps is switched (from on to off or from off to on).

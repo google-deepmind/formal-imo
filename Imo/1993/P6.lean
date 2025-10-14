@@ -18,6 +18,7 @@ import Imo.ProblemImports
 
 open scoped Real
 open scoped Nat
+open scoped Fin.CommRing
 
 /--
 There are $n>1$ lamps $L_0,L_1,\ldots ,L_{n-1}$ in a circle. We use $L_{n+k}$ to mean $L_k$. A lamp is at all times either on or off. Initially they are all on. Perform steps $s_0,s_1,\ldots$ as follows: at step $s_i$, if $L_{i-1}$ is lit, then switch $L_i$ from on to off or vice versa, otherwise do nothing. Show that:

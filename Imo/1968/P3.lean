@@ -29,9 +29,9 @@ $ax_n^2+bx_n+c=x_1$
 -/
 @[imo_problem_subject algebra]
 theorem imo_1968_p3 (n : ℕ) (hn : 2 < n) [NeZero n] (a b c : ℝ) (ha : a ≠ 0) (S : Set (Fin n → ℝ))
-    (hS : S = {x : Fin n → ℝ | ∀ i, a * x i ^ 2 + b * x i + c = x (i + 1)}) (Δ : ℝ)
-    (hd : Δ = (b - 1) ^ 2 - 4 * a * c) :
-    (Δ < 0 → S = ∅) ∧ (Δ = 0 → ∃ s, S = {s}) ∧ (Δ > 0 → ∃ s t, s ≠ t ∧ s ∈ S ∧ t ∈ S) := by
+    (hS : S = {x : Fin n → ℝ | ∀ i, a * x i ^ 2 + b * x i + c = x (i + 1)}) (d : ℝ)
+    (hd : d = (b - 1) ^ 2 - 4 * a * c) :
+    (d < 0 → S = ∅) ∧ (d = 0 → ∃ s, S = {s}) ∧ (d > 0 → ∃ s t, s ≠ t ∧ s ∈ S ∧ t ∈ S) := by
   sorry
 
 theorem imo_1968_p3.parts.negative (n : ℕ) (hn : 2 < n) [NeZero n] (a b c : ℝ) (ha : a ≠ 0)

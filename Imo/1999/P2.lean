@@ -18,6 +18,7 @@ import Imo.ProblemImports
 
 open scoped Real
 open scoped Nat
+open scoped Fin.CommRing
 
 /--
 Let $n \ge 2$ be a fixed integer. Find the smallest constant $C$ such that for all non-negative reals $x_1, \ldots , x_n$: $$\sum_{i< j} x_i x_j (x_i^2 + x_j^2) \le C (\sum_i x_i)^4.$$ Determine when equality occurs.

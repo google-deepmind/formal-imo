@@ -20,6 +20,7 @@ open scoped Real
 open scoped Nat
 open scoped EuclideanGeometry
 open scoped Classical
+open scoped Fin.CommRing
 
 /-- Let $ n$ be a positive integer. Consider
 \[ S = \left\{ (x,y,z) \mid x,y,z \in \{ 0, 1, \ldots, n\}, x + y + z > 0 \right \}

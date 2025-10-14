@@ -19,6 +19,9 @@ import Imo.ProblemImports
 open scoped Real
 open scoped Nat
 
+open scoped Fin.CommRing
+
+
 -- Solution: 12
 /--
 $100$ cards are numbered $1$ to $100$ (each card different) and placed in $3$ boxes (at least one card in each box). How many ways can this be done so that if two boxes are selected and a card is taken from each, then the knowledge of their sum alone is always sufficient to identify the third box? -/

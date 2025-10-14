@@ -16,6 +16,8 @@ limitations under the License.
 
 import Imo.ProblemImports
 
+open scoped Fin.CommRing
+
 /--
 Let $S$ be the set of non-negative integers. Find all functions $f:S\to S$ such that $f(m+f(n)) = f(f(m))+f(n)$ for all $m,n$. -/
 @[imo_problem_subject algebra]

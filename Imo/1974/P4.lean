@@ -18,6 +18,8 @@ import Imo.ProblemImports
 
 open Classical
 open scoped Function
+open scoped Fin.CommRing
+
 /--
 An $8\times8$ chessboard is divided into $p$ disjoint rectangles (along the lines between the squares), so that each rectangle has the same number of white squares as black squares, and each rectangle has a different number of squares. Find the maximum possible value of $p$ and all possible sets of rectangle sizes.
 

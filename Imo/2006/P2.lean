@@ -19,6 +19,7 @@ import Imo.ProblemImports
 open scoped Real
 open scoped Nat
 open scoped EuclideanGeometry
+open scoped Fin.CommRing
 
 -- TODO(iharbury): This would benefit from a definition of a regular polygon to be added to ForMathlib.Geometry.«2d».
 
