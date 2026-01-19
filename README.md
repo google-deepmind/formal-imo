@@ -48,7 +48,7 @@ with the `answer()` elaborator from the [formal-conjectures repository](https://
 For problems with a geometric component, we have various ways to write "a 2D euclidean space":
 
 1. `{V P} [NormedAddCommGroup V] [InnerProductSpace ℝ V] [MetricSpace P] [NormedAddTorsor V P] [Module.Oriented ℝ V (Fin 2)] [Fact (Module.finrank ℝ V = 2)]` (as demonstrated by [`EuclideanGeometry.oangle_add_oangle_add_oangle_eq_pi`](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Geometry/Euclidean/Triangle.html#EuclideanGeometry.oangle_add_oangle_add_oangle_eq_pi))
-2. `ℝ²` aka `EuclideanSpace ℝ (Fin 2)` (notation provided in the [formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ForMathlib/Geometry/2d.lean) repository)
+2. `ℝ²` aka `EuclideanSpace ℝ (Fin 2)` (notation provided in the [formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjecturesForMathlib/Geometry/2d.lean) repository)
 3. `ℂ`.
 
 1 has the advantage that it doesn't impose a coordinate-based view; and generalizes to situations where the 2D space resides within a larger ambient nD space. It seems to be the preferred approach by some existing mathlib users.

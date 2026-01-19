@@ -15,9 +15,9 @@ limitations under the License.
 -/
 
 import Mathlib
-import FormalConjectures.ForMathlib.Data.Set.Triplewise
-import FormalConjectures.ForMathlib.Geometry.«2d»
-import FormalConjectures.ForMathlib.Geometry.«3d»
+import FormalConjecturesForMathlib.Data.Set.Triplewise
+import FormalConjecturesForMathlib.Geometry.«2d»
+import FormalConjecturesForMathlib.Geometry.«3d»
 import FormalConjectures.Util.Answer
 import Imo.ProblemImports.Attributes
 import Imo.ProblemImports.CircularOrder
