@@ -27,6 +27,6 @@ theorem imo_1981_p2 (F : ℕ → ℕ → ℚ)
       ∀ (r n : ℕ) (S : Finset (Finset ℕ)) (h₁ : 1 ≤ r ∧ r ≤ n)
         (h₂ : S = (Finset.Icc 1 n).powersetCard r),
           -- untop' else will never be triggered.
-          F n r = (∑ s ∈ S, s.min.untop' 0) / S.card) :
+          F n r = (∑ s ∈ S, s.min.untopD 0) / S.card) :
     ∀ n r, 1 ≤ r ∧ r ≤ n → F n r = (n + 1) / (r + 1) := by
   sorry

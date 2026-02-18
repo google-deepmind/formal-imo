@@ -31,8 +31,6 @@ package imo where
 lean_lib Imo where
   globs := #[.submodules `Imo]
 
-require "leanprover-community" / "mathlib"
-
 require "google-deepmind" / "formal_conjectures"
 
 

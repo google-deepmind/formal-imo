@@ -26,5 +26,5 @@ Let $p,q,n$ be three positive integers with $p+q < n$. Let $x_0, x_1, \ldots , x
 theorem imo_1996_p6 (p q n : ℕ) (h₀ : 0 < p ∧ 0 < q ∧ 0 < n) (h₁ : p + q < n) (x : Fin (n + 1) → ℤ)
     (h₂ : x 0 = 0 ∧ x n = 0)
     (h₃ : ∀ i, 0 < i ∧ i ≤ n → x i - x (i - 1) = p ∨ x i - x (i - 1) = -q) :
-    ∃ i j : Fin (n + 1), i < j ∧ (i, j) ≠ (0, n) ∧ x i = x j := by
+    ∃ i j : Fin (n + 1), i < j ∧ (i, j) ≠ (0, Fin.last n) ∧ x i = x j := by
   sorry
